@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+
+  tasks:
+    - name: pull docker image
+      command: docker pull username/task-tracker:latest
+
+    - name: run container
+      command: >
+        docker run -d -p 3000:3000
+        username/task-tracker:latest
