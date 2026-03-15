@@ -32,4 +32,4 @@ jobs:
         pytest || true
 
     - name: Build Docker image
-      run: docker build -t username/task-tracker .
+      run: docker build -t username/task-tracker -f docker/Dockerfile .
